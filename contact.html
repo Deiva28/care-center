@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="images/led tv.jpg" href="images/led tv.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="back"> 
+        <header>
+           
+            <nav>
+                <h1>Contact Us</h1>
+            <h3  style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> SREE AYYAN ELECTRONICS CARE CENTER</h3>
+                <ul>
+                    <li class="three"><a href="index.html">Home</a></li>
+                    <li class="three"><a href="services.html">Services</a></li>
+                    <li class="three"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+
+            <section class="contact-container">
+            <U>  <h2>Fill Your Information</h2></U>
+                    
+    
+                <form class="contact-form" id="googleForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    
+                    <label for="Number">Mobile Number</label>
+                    <input type="number" id="Number" name="Number"  pattern="[0-9]{10}" placeholder="Your Number" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"  placeholder="Your Message" required></textarea>
+                    <button type="submit">Call Request</button>
+                </form>
+
+                <script>
+                    document.getElementById("googleForm").addEventListener("submit", function(e) {
+                        e.preventDefault(); // Prevent default form submission
+            
+                        // Google Form POST URL
+                        const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSemjm7jGGR9QMnmOGiZYZImZhs3mTXZ3l7kC3A4f1ydvE5WLw/formResponse";
+            
+                        // Get form data
+                        const formData = new FormData();
+                        formData.append("entry.693274127", document.getElementById("name").value);
+                        formData.append("entry.1529911255", document.getElementById("Number").value);
+                        formData.append("entry.2111331657", document.getElementById("message").value);
+            
+                        // Submit data using fetch
+                        fetch(formUrl, {
+                            method: "POST",
+                            mode: "no-cors",
+                            body: formData
+                        }).then(() => {
+                            alert("Form submitted successfully!");
+                            document.getElementById("googleForm").reset();
+                        }).catch(error => {
+                            console.error("Error:", error);
+                        });
+                    });
+                </script>
+
+                <br>
+                OR
+                <br>
+                <br>
+                <p id="y">
+                    
+                    Call To +91-8220008482 
+                </p>
+            </section>
+
+
+        <br>
+            <footer>
+            <p>&copy; 2025 Electronics Repair Services</p>
+           
+        </footer>
+    </div>
+</body>
+</html>
