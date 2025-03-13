@@ -212,17 +212,18 @@ footer {
     font-weight: bold;
     background-color: rgb(251, 255, 4);
 }
-
-
-.marquee p {
-    
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
     white-space: nowrap;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(10, 10, 10);
-    animation: marquee 30s linear infinite;
+    box-sizing: border-box;
 }
 
+.marquee-content {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+
+}
 /* Keyframes for smooth scrolling */
 @keyframes marquee {
     from {
