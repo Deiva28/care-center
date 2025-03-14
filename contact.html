@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="back"> 
-        <header>
+        <header >
            
             <nav>
                 <h1>Contact Us</h1>
@@ -46,13 +46,13 @@
                         e.preventDefault(); // Prevent default form submission
             
                         // Google Form POST URL
-                        const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSemjm7jGGR9QMnmOGiZYZImZhs3mTXZ3l7kC3A4f1ydvE5WLw/formResponse";
+                        const formUrl = "https://docs.google.com/forms/d/1q-mcZ73Njxj1hPhsYIMRSo4Y4Jqi4Z9VGxbLID2dDvo/formResponse";
             
                         // Get form data
                         const formData = new FormData();
-                        formData.append("entry.693274127", document.getElementById("name").value);
-                        formData.append("entry.1529911255", document.getElementById("Number").value);
-                        formData.append("entry.2111331657", document.getElementById("message").value);
+                        formData.append("entry.1605082360", document.getElementById("name").value);
+                        formData.append("entry.300330496", document.getElementById("Number").value);
+                        formData.append("entry.1401478029", document.getElementById("message").value);
             
                         // Submit data using fetch
                         fetch(formUrl, {
